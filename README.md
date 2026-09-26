@@ -1,6 +1,11 @@
-# Lumnia
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/logo-dark.svg">
+    <img src=".github/assets/logo-light.svg" alt="Lumnia" width="280">
+  </picture>
+</p>
 
-Plataforma de ensino online (LMS/MOOC) white label.
+<p align="center">Plataforma de ensino online (LMS/MOOC) white label.</p>
 
 > **Estado atual: v0.1, MVP interno.** Uma instância atende uma única organização, com dois perfis (Aluno e Professor), cursos no formato MOOC organizados em módulos e aulas, vídeos por link do YouTube ou do Vimeo, matrícula em um clique e registro de progresso. A interface ainda é funcional, sem o design system aplicado por completo.
 
