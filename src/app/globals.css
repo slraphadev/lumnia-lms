@@ -43,64 +43,44 @@
   --green-600: #1a8a5c;
   --green-800: #0f5238;
 
-  /* Semânticos, modo Light */
-  --bg: var(--brand-white);
-  --surface: var(--base-white);
-  --surface2: var(--neutral-50);
-  --bg-inverse: var(--brand-black);
-  --fg: var(--brand-black);
-  --fg2: var(--neutral-600);
-  --fg-disabled: var(--neutral-400);
-  --fg-inverse: var(--brand-white);
-  --brand-foreground: var(--brand-white);
-  --brand-text: var(--brand-navy-electric);
-  --line: var(--neutral-200);
-  --line-strong: var(--neutral-300);
-  --ring: var(--brand-navy-electric);
-  --brand: var(--brand-navy-electric);
-  --brand-hover: var(--electric-700);
-  --brand-deep: var(--brand-navy);
-  --brand-soft: var(--electric-50);
-  --danger: var(--red-500);
-  --danger-soft: var(--red-100);
+  /*
+   * Semânticos: light-dark(<claro>, <escuro>). O tema vem do color-scheme:
+   * segue o sistema por padrão, ou o que o usuário escolheu (data-theme, via cookie).
+   */
+  --bg: light-dark(var(--brand-white), var(--brand-black));
+  --surface: light-dark(var(--base-white), var(--brand-prussian-blue));
+  --surface2: light-dark(var(--neutral-50), var(--brand-deep-twilight));
+  --bg-inverse: light-dark(var(--brand-black), var(--brand-white));
+  --fg: light-dark(var(--brand-black), var(--brand-white));
+  --fg2: light-dark(var(--neutral-600), var(--neutral-300));
+  --fg-disabled: light-dark(var(--neutral-400), var(--neutral-500));
+  --fg-inverse: light-dark(var(--brand-white), var(--brand-black));
+  --brand-foreground: light-dark(var(--brand-white), var(--brand-black));
+  --brand-text: light-dark(var(--brand-navy-electric), var(--electric-300));
+  --line: light-dark(var(--neutral-200), var(--brand-navy));
+  --line-strong: light-dark(var(--neutral-300), var(--electric-400));
+  --ring: light-dark(var(--brand-navy-electric), var(--electric-300));
+  --brand: light-dark(var(--brand-navy-electric), var(--electric-300));
+  --brand-hover: light-dark(var(--electric-700), var(--electric-200));
+  --brand-deep: light-dark(var(--brand-navy), var(--electric-200));
+  --brand-soft: light-dark(var(--electric-50), var(--brand-navy));
+  --danger: light-dark(var(--red-500), var(--red-300));
+  --danger-soft: light-dark(var(--red-100), var(--red-700));
   --warn: var(--amber-400);
-  --warn-soft: var(--amber-100);
-  --warn-foreground: var(--amber-800);
-  --success: var(--green-600);
-  --success-soft: var(--green-100);
+  --warn-soft: light-dark(var(--amber-100), var(--amber-800));
+  --warn-foreground: light-dark(var(--amber-800), var(--amber-100));
+  --success: light-dark(var(--green-600), var(--green-400));
+  --success-soft: light-dark(var(--green-100), var(--green-800));
 
+  color-scheme: light dark;
+}
+
+:root[data-theme="light"] {
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: var(--brand-black);
-    --surface: var(--brand-prussian-blue);
-    --surface2: var(--brand-deep-twilight);
-    --bg-inverse: var(--brand-white);
-    --fg: var(--brand-white);
-    --fg2: var(--neutral-300);
-    --fg-disabled: var(--neutral-500);
-    --fg-inverse: var(--brand-black);
-    --brand-foreground: var(--brand-black);
-    --brand-text: var(--electric-300);
-    --line: var(--brand-navy);
-    --line-strong: var(--electric-400);
-    --ring: var(--electric-300);
-    --brand: var(--electric-300);
-    --brand-hover: var(--electric-200);
-    --brand-deep: var(--electric-200);
-    --brand-soft: var(--brand-navy);
-    --danger: var(--red-300);
-    --danger-soft: var(--red-700);
-    --warn: var(--amber-400);
-    --warn-soft: var(--amber-800);
-    --warn-foreground: var(--amber-100);
-    --success: var(--green-400);
-    --success-soft: var(--green-800);
-
-    color-scheme: dark;
-  }
+:root[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 @theme inline {

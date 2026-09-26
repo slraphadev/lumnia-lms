@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { signOutAction } from "@/app/(auth)/actions";
 import { Logo } from "@/components/logo";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 import { ROLE_LABELS, isRole } from "@/lib/roles";
 import { getSession } from "@/lib/session";
 
@@ -29,6 +30,7 @@ export async function SiteHeader() {
             </Link>
           )}
         </nav>
+        <ThemeSwitcher />
         {session ? (
           <div className="flex items-center gap-3 text-sm">
             <span className="text-fg-2">
