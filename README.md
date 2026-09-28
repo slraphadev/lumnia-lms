@@ -1,9 +1,7 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/logo-dark.svg">
-    <img src=".github/assets/logo-light.svg" alt="Lumnia" width="280">
-  </picture>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/banner-dark.png">
+  <img src=".github/assets/banner-light.png" alt="Lumnia: aprender online, com a cara da sua instituição." width="100%">
+</picture>
 
 <p align="center">Plataforma de ensino online (LMS/MOOC) white label.</p>
 
